@@ -19,6 +19,8 @@
 
     <!-- JAVASCRIPT -->
     <script src="script.js" type="text/javascript" defer></script>
+    <script src="Calculadora.js" type="text/javascript"></script>
+    <script src="Display.js" type="text/javascript"></script>
 
 </head>
 
@@ -26,10 +28,10 @@
 <body>
   <div class="calculadora">
     <div class="display">
-      <div class="valor-anterior">
+      <div class="valor-anterior" id="displayValorAnterior">
         
       </div>
-      <div class="valor-actual">
+      <div class="valor-actual" id="displayValorActual">
         
       </div>
     </div>
@@ -37,7 +39,7 @@
     <div class="botones">
       <button class="button clear">C</button>
       <button class="button borrar">&larr;</button>
-      <button class="button porcentaje">^</button>
+      <!-- <button class="button porcentaje">j</button> -->
       <button class="button operadores" value="dividir">/</button>
       <button class="button numeros">7</button>
       <button class="button numeros">8</button>
@@ -54,7 +56,7 @@
       <button class="button numeros">00</button>
       <button class="button numeros">0</button>
       <button class="button numeros">.</button>
-      <button class="button igual" value="igual">=</button>                        
+      <button class="button operadores" value="igual">=</button>                        
 
     </div>
   </div> 

@@ -1,49 +1,32 @@
+const displayValorAnterior = document.getElementById('displayValorAnterior');
+const displayValorActual = document.getElementById('displayValorActual')
+
 const botonNumero = document.querySelectorAll(".numeros");
 const botonOperador = document.querySelectorAll(".operadores");
-const botonClear = document.querySelectorAll(".clear");
+const botonClear = document.querySelector(".clear");
 const botonIgual = document.querySelectorAll(".igual");
-const displayValorAnterior = document.querySelector(".valor-anterior");
-const displayValorActual = document.querySelector(".valor-actual");
 const borrar = document.querySelector(".borrar");
 
 
-displayValorActual.innerHTML = '';
+this.display = new Display (displayValorAnterior, displayValorActual);
 
-        botonNumero.forEach(boton => {
-                boton.addEventListener('click', () => {
-                    displayValorActual.innerHTML = displayValorActual.innerHTML + boton.innerHTML;
-                })
-        })
-
-        
-    botonOperador.forEach(boton => {
-        boton.addEventListener('click', () => {
-            console.log(boton.innerHTML);
-            // displayValorAnterior.innerHTML = displayValorActual.innerHTML + boton.innerHTML;
-            // displayValorActual.innerHTML = '';
-            displayValorActual.innerHTML += boton.innerHTML;
-        })
+botonNumero.forEach(boton => {
+    boton.addEventListener('click', () => {
+        display.agregarNumero(boton.innerHTML);
     })
-   
+})
 
-        
+borrar.addEventListener('click', () => {
+    display.borrar();
+})
 
-    botonClear.forEach(boton => {
-        boton.addEventListener('click', () => {
-            console.log(boton.innerHTML);
-            displayValorActual.innerHTML = '';
-            displayValorAnterior.innerHTML = ''
-        })
+botonClear.addEventListener('click', () => {
+    display.borrarTodo();
+})
+
+botonOperador.forEach(boton => {
+    boton.addEventListener('click', () => {
+        display.computar(boton.value)
     })
-
-    botonIgual.forEach(boton => {
-        boton.addEventListener('click', () => {
-            console.log(boton.innerHTML);
-            displayValorActual.innerHTML = eval(displayValorActual.innerHTML);
-        })
-    })
-
-    borrar.addEventListener('click', () => {
-        displayValorActual.innerHTML = displayValorActual.innerHTML.slice(0,-1)
-    })
+})
 

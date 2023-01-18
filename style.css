@@ -49,11 +49,10 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin: 10px;
+  /* border-radius: 32px; */
   
   
 }
-
-
 
 .button {
   height: 80px;
@@ -61,12 +60,18 @@ body {
   font-size: 2rem;
   padding: 10px;
   margin: 10px;
-  border-radius: 100%;
+  border-radius: 32px;
   border: none;
   color: #2e1967;
   cursor: pointer;
   box-shadow: .5px 1px 1px .5px;
   background: radial-gradient(circle at 125% 125%,#2e1967, #8e7dba, rgba(247,247,247,1))
+  
+}
+.clear {
+  grid-column: span 2;
+  border-radius: 32px;
+  width: 180px;
   
 }
 
