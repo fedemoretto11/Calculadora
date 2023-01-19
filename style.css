@@ -2,10 +2,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ede;
+  background-color: #2edbdf;
 }
 .calculadora {
-  background-color: #a3e1ec;
+  background-color: #2edbdf;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,7 +22,7 @@ body {
   width: 400px;
   margin: 16px;
   padding: 8px;
-  background-color: #2e1967;
+  background-color: #58aef7;
   box-shadow: 1px 1px 5px 1px #f5eddd;
   user-select: none;
   border-radius: 10px;
@@ -30,16 +30,16 @@ body {
 
 .valor-anterior {
   height: 40%;
-  color: #fff;
+  color: #b80068;
   text-align: right;
-  font-size: 2rem;
+  font-size: 3rem;
 
 }
 
 .valor-actual {
   height: 60%;
   max-width: 390px;
-  color: #fff;
+  color: #b80068;
   font-size: 4rem;
   text-align: right;
 }
@@ -48,6 +48,8 @@ body {
 .botones {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* grid-template-columns: repeat(4,75px); */
+  /* grid-template-rows: repeat(5, 75px); */
   margin: 10px;
   /* border-radius: 32px; */
   
@@ -57,15 +59,15 @@ body {
 .button {
   height: 80px;
   width: 80px;
-  font-size: 2rem;
-  padding: 10px;
+  font-size: 2.5rem;
+  padding: 0px;
   margin: 10px;
   border-radius: 32px;
   border: none;
-  color: #2e1967;
+  color: #b80068;
   cursor: pointer;
-  box-shadow: .5px 1px 1px .5px;
-  background: radial-gradient(circle at 125% 125%,#2e1967, #8e7dba, rgba(247,247,247,1))
+  /* box-shadow: .5px 1px 1px .5px; */
+  background-color: #0100f3;
   
 }
 .clear {
@@ -81,18 +83,18 @@ body {
 }
 
 .C {
-  color: #d00;
+  color: #fe753b;
 }
 
 .operadores, .clear, .borrar, .porcentaje {
-  color: #c41690;
+  color: #ffb2df;
 }
 
-.igual  {
-  background: #2e1967;
-  color: #66b344;
+#igual  {
+  background: #b80068;
+  color: #0100f3;
 }
-.igual:active {
+#igual:active {
   background: #fff;
   color: #a8572a;
 }
